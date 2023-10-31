@@ -32,4 +32,18 @@ public class Room {
     }
     public void setDirty(boolean dirty) {
         this.dirty = dirty;
+    }
+    public void checkIn() {
+        if (!occupied) {
+            occupied = true;
+            dirty = true;
+        }}
+    public void checkOut() {
+        if (occupied) {
+            dirty = true;
+            occupied = false;
+        }}
+    public void cleanRoom() {
+        dirty = false;
     }}
+
